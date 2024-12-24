@@ -1,0 +1,84 @@
+# BattleGrounds Configuration
+# Created by: deva7727
+# Last Updated: 2024-12-24 05:29:34 UTC
+
+# Game Settings
+settings:
+  min-players: 2
+  max-players: 10
+  countdown-time: 30
+  round-time: 180
+  rounds-to-win: 3
+  default-map: map1
+
+# Weapon Settings
+weapons:
+  pistol:
+    damage: 4
+    cooldown: 500
+  rifle:
+    damage: 6
+    cooldown: 300
+  sniper:
+    damage: 10
+    cooldown: 1500
+  shotgun:
+    damage: 8
+    cooldown: 800
+
+# Maps Configuration
+maps:
+  # Default Map Configuration
+  map1:
+    enabled: true
+    center: world,639,66,-420,7.203064,28.200052
+    team1-spawn: world,629,64,-380,-165.597015,51.900036
+    team2-spawn: world,673,71,-394,91.803123,41.850037
+  
+  # Example Additional Map
+  dust2:
+    enabled: true
+    center: world,0,64,0,0,0
+    team1-spawn: world,10,64,10,0,0
+    team2-spawn: world,-10,64,-10,180,0
+
+# Messages
+messages:
+  game-start: "&aThe game has started!"
+  game-end: "&eGame Over! Winner: %winner%"
+  round-start: "&bRound %round% starting!"
+  round-end: "&bRound %round% ended!"
+  team-join: "&7You have joined %team%"
+  game-join: "&aYou have joined the game!"
+  game-leave: "&cYou have left the game!"
+  not-enough-players: "&cNot enough players to start!"
+  already-in-game: "&cYou are already in a game!"
+  not-in-game: "&cYou are not in a game!"
+
+#matchmaking 
+matchmaking:
+  timeout: 20
+  locations:
+    waiting:
+      world: "world"
+      x: 0
+      y: 64
+      z: 0
+      yaw: 0
+      pitch: 0
+# Database Settings
+database:
+  enabled: false
+  type: sqlite
+  host: localhost
+  port: 3306
+  database: battlegrounds
+  username: root
+  password: ''
+
+# Plugin Information
+plugin-info:
+  author: deva7727
+  created-date: "2024-12-24"
+  created-time: "05:29:34 UTC"
+  version: "1.0"
